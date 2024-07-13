@@ -108,9 +108,11 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
         - `1`: Titik yang tidak bisa dilalui oleh garis
         - `2`: Titik mulai
     - contoh untuk gambar di Fig 3 untuk level beginner:
+    <br>
     <div align=center>
     <img src="./img/awal-permainan.png" width="40%" height="40%">
     </div>
+    <br>
 
     ```bash
     {
@@ -153,11 +155,13 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
             - dst
         - Tidak ada blocked dot pada game tambahan ini. Namun setiap warna harus terhubung dengan warna yang sama dan garis dari warna yang berbeda tidak boleh saling bersinggungan atau melewati titik warna yang berbeda. Mahasiswa bisa mencoba game referensi di [sini](https://www.cokogames.com/color-dot-connect/play/) untuk memahami rule permainan.
     - Contoh konfigurasi board untuk game tambahan:
+        <br>
         <div align=center>
         <img src="./img/color-dot-connect.png" width="40%" height="40%">
         <br>
         <b>Fig 4.</b> Tampilan awal permainan Color Dot Connect
         </div>
+        <br>
     ```bash
         {
             "board": [
