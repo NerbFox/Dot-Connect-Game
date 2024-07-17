@@ -2,7 +2,7 @@
 
 > Task Seleksi Lab IRK created by Nigel Sahl
 
-versi **14/07/2024**
+versi **17/07/2024**
 
 <!-- daftar isi -->
 
@@ -11,8 +11,8 @@ versi **14/07/2024**
 - [Daftar Isi](#daftar-isi)
 - [Latar Belakang](#💡-latar-belakang)
 - [Spesifikasi Tugas](#📝-spesifikasi-tugas)
-  - [Spesifikasi Wajib (XXX Poin)](#spesifikasi-wajib-xxx-poin)
-  - [Spesifikasi Bonus (XXX Poin)](#spesifikasi-bonus-xxx-poin)
+  - [Spesifikasi Wajib (1600 Poin)](#spesifikasi-wajib-1600-poin)
+  - [Spesifikasi Bonus (1400 Poin)](#spesifikasi-bonus-1400-poin)
 - [Batasan](#batasan)
 - [Pengerjaan dan Pengumpulan](#📂-pengerjaan-dan-pengumpulan)
 - [Penilaian](#📌-penilaian)
@@ -57,7 +57,7 @@ Tujuan dari permainan ini adalah menghubungkan semua titik yang terbuka (free do
 
 Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
 
-### Spesifikasi Wajib (XXX Poin)
+### Spesifikasi Wajib (1600 Poin)
 
 0. **Skema Permainan:**
 
@@ -174,9 +174,9 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
      - Cara menjalankan aplikasi
      - Bonus yang diimplementasikan
 
-### Spesifikasi Bonus (XXX Poin)
+### Spesifikasi Bonus (1400 Poin)
 
-1. **Game Tambahan - Color Dot Connect: (600 Poin)**
+1. **Game Tambahan - Color Dot Connect: (800 Poin)**
    Membuat game tambahan di mode game awal sebelum memulai permainan. Referensi game tambahan adalah [Color Dot Connect](https://www.cokogames.com/color-dot-connect/play/).
 
    - Membuat game tambahan yaitu Color Dot Connect serta membuat algoritma bot mode untuk game tambahan tersebut. Spesifikasi lain seperti mode dan skema mengikuti game spesifikasi wajib pada poin 0.
@@ -186,7 +186,9 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
      - Elemen matriks:
        - `0`: Sebagai titik kosong atau free dot
        - `1`: Sebagai titik mulai (start dot) atau titik akhir (end dot) untuk warna pertama
-       - `2`: sama seperti `2` namun untuk warna kedua
+       - `2`: sama seperti `1` namun untuk warna kedua
+       - `3`: sama seperti `1` namun untuk warna ketiga
+       - `4`: sama seperti `1` namun untuk warna keempat
        - dst
      - Tidak ada blocked dot pada game tambahan ini. Namun setiap warna harus terhubung dengan warna yang sama dan garis dari warna yang berbeda tidak boleh saling bersinggungan atau melewati titik warna yang berbeda. Mahasiswa bisa mencoba game referensi di [sini](https://www.cokogames.com/color-dot-connect/play/) untuk memahami rule permainan.
    - Contoh konfigurasi board untuk game tambahan:
@@ -202,24 +204,28 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
        {
            "board": [
                [1, 0, 0, 0, 0],
-               [1, 1, 0, 0, 0],
-               [0, 2, 1, 0, 0],
                [0, 0, 0, 0, 0],
-               [0, 0, 0, 0, 0]
+               [0, 0, 4, 0, 0],
+               [2, 4, 3, 0, 1],
+               [3, 0, 0, 0, 2]
            ]
        }
    ```
+   Note: Penetapan angka untuk warna tertentu tidak harus sama dengan contoh di atas. (angka 1-4 hanya menandakan warna yang berbeda)
 
-2. **Animasi Jalannya Algoritma: (150 Poin)** - Membuat animasi jalannya algoritma dari titik mulai sampai solusi ditemukan.
+2. **Animasi Jalannya Algoritma: (160 Poin)** - Membuat animasi jalannya algoritma dari titik mulai sampai solusi ditemukan.
 <div align=center>
 <img src="./img/dot-connect.gif" width="70%" height="70%">
 </div>
 <br>
 
-3. **Model Algoritma:** (**210 Poin**)
-   - Membuat beberapa model algoritma dasar(minimal 3, misal greedy, brute force, dan UCS). Masing-masing algoritma 70 poin dengan batas maksimum poin adalah 210.
+3. **Model Algoritma:** (**240 Poin**)
+   - Membuat beberapa model algoritma dasar(minimal 3, misal greedy, brute force, dan UCS). Masing-masing algoritma 80 poin dengan batas maksimum poin adalah 240.
    - Algoritma dasar ini tidak harus menyelesaikan permainan dalam batasan waktu yang diberikan.
    - Sehingga total algoritma adalah 4 yaitu 3 model algoritma dasar dan 1 algoritma utama misal gabungan beberapa algoritma dasar atau algoritma dasar yang sudah dimodifikasi dengan heuristik atau pendeekatan lain.
+
+4. **Bonus waktu eksekusi:** (**200 Poin**)
+   - Bonus waktu eksekusi akan diberikan kepada 5 mahasiswa. Poin bonus akan diberikan berdasarkan **5 posisi** waktu eksekusi tercepat dari 10 mahasiswa yang melakukan submisi tercepat. Detail bonus waktu eksekusi dapat dilihat di bagian penilaian.
 
 ## Batasan
 
@@ -248,6 +254,7 @@ Penilaian akan berdasarkan implementasi spesifikasi wajib dan bonus yang telah d
 - Ketepatan bonus yang diimplementasikan
 - Kelengkapan readme yang dibuat
 
+**Bonus Waktu Eksekusi**: <br>
 Berikut distribusi skor dengan rata-rata waktu eksekusi tercepat berdasarkan test case yang diberikan (**Hanya dilakukan untuk 10 mahasiswa yang melakukan submisi tercepat**)
 
 | Posisi | Poin Bonus Tambahan |
@@ -258,6 +265,16 @@ Berikut distribusi skor dengan rata-rata waktu eksekusi tercepat berdasarkan tes
 | 4      | 50                  |
 | 5      | 25                  |
 | 6 dst  | 0                   |
+
+Detail:
+- Spesifikasi Wajib (1600 Poin)
+- Spesifikasi Bonus (1400 Poin):
+  - Game Tambahan - Color Dot Connect (800 Poin)
+  - Animasi Jalannya Algoritma (160 Poin)
+  - Model Algoritma (240 Poin)
+  - Bonus waktu eksekusi (200 Poin)
+
+Total maksimal poin yang bisa didapatkan adalah 3000 Poin.
 
 ## 📚 Referensi
 
