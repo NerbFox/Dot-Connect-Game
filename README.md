@@ -1,8 +1,8 @@
-# Dot-Connect-Game
+# Dot Connect Game
 
 > Task Seleksi Lab IRK created by Nigel Sahl
 
-versi **17/07/2024**
+versi **23/07/2024**
 
 <!-- daftar isi -->
 
@@ -11,8 +11,8 @@ versi **17/07/2024**
 - [Daftar Isi](#daftar-isi)
 - [Latar Belakang](#💡-latar-belakang)
 - [Spesifikasi Tugas](#📝-spesifikasi-tugas)
-  - [Spesifikasi Wajib (1600 Poin)](#spesifikasi-wajib-1600-poin)
-  - [Spesifikasi Bonus (1400 Poin)](#spesifikasi-bonus-1400-poin)
+  - [Spesifikasi Wajib (1500 Poin)](#spesifikasi-wajib-1500-poin)
+  - [Spesifikasi Bonus (1250 Poin)](#spesifikasi-bonus-1250-poin)
 - [Batasan](#batasan)
 - [Pengerjaan dan Pengumpulan](#📂-pengerjaan-dan-pengumpulan)
 - [Penilaian](#📌-penilaian)
@@ -57,7 +57,7 @@ Tujuan dari permainan ini adalah menghubungkan semua titik yang terbuka (free do
 
 Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
 
-### Spesifikasi Wajib (1600 Poin)
+### Spesifikasi Wajib (1500 Poin)
 
 0. **Skema Permainan:**
 
@@ -100,8 +100,8 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
 1. **Implementasi Algoritma Penyelesaian Bot Mode:**
 
    - Algoritma yang diimplementasikan dapat berupa brute force, greedy, path finding,
-     atau algorima lain yang diajarkan dalam mata kuliah Strategi Algoritma. Algoritma dapat beruba kombinasi dari beberapa algoritma seperti path finding dan greedy.
-   - Algoritma harus bisa menyelesaikan permainan dalam waktu eksekusi di bawah 20 detik.
+     atau algorima lain yang diajarkan dalam mata kuliah Strategi Algoritma. Algoritma dapat beruba kombinasi dari beberapa algoritma seperti path finding dan greedy atau algoritma dasar dengan modifikasi heuristik sesuai kebutuhan penyelasaian permainan.
+   - Algoritma harus bisa menyelesaikan permainan dalam waktu eksekusi di bawah 10 detik.
 
 2. **Implementasi dalam Website:**
 
@@ -162,7 +162,7 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
 
 4. **Ukuran Board:**
 
-   - Ukuran board mengikuti referensi game yaitu Beginner, Easy, Medium, Hard (5x5, 8x6, 10x6, 12x8).
+   - Ukuran board mengikuti referensi game yaitu Beginner, Easy, Medium, Hard (5x5, 8x6, 10x6, 12x8). Note: axb adalah ukuran board dengan a adalah jumlah baris dan b adalah jumlah kolom. Contoh ukuran dan konfigurasi dapat dilihat di folder [img](./img) di repository ini.
 
 5. **Repository:**
    - Backend dan frontend diletakkan dalam repository yang sama.
@@ -170,13 +170,30 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
      - identitas pembuat
      - Penjelasan singkat mengenai aplikasi
      - Tech stack yang digunakan
+     - Nama algorithm yang digunakan misal greedy, brute force, atau algoritma lain
      - Penjelasan algoritma yang digunakan
+     - **T(n) dan O(n)** dari algoritma yang digunakan
      - Cara menjalankan aplikasi
      - Bonus yang diimplementasikan
 
-### Spesifikasi Bonus (1400 Poin)
+### Spesifikasi Bonus (1250 Poin)
 
-1. **Game Tambahan - Color Dot Connect: (800 Poin)**
+1. **Bonus waktu eksekusi:** (**150 Poin**)
+
+   Bonus waktu eksekusi akan diberikan kepada 5 mahasiswa. Poin bonus akan diberikan berdasarkan **5 posisi** waktu eksekusi tercepat dari 10 mahasiswa yang melakukan submisi tercepat. Detail bonus waktu eksekusi dapat dilihat di bagian penilaian.
+
+2. **Animasi Jalannya Algoritma: (160 Poin)** - Membuat animasi jalannya algoritma dari titik mulai sampai solusi ditemukan.
+<div align=center>
+<img src="./img/dot-connect.gif" width="70%" height="70%">
+</div>
+<br>
+
+3. **Model Algoritma:** (**240 Poin**)
+   - Membuat beberapa model algoritma dasar(minimal 3, misal greedy, brute force, dan UCS). Masing-masing algoritma 80 poin dengan batas maksimum poin adalah 240.
+   - Algoritma dasar ini tidak harus menyelesaikan permainan dalam batasan waktu yang diberikan (Algoritma utama yang harus menyelesaikan permainan dalam batasan waktu yang diberikan).
+   - Sehingga total algoritma adalah 4 yaitu 3 model algoritma dasar dan 1 algoritma utama. Contoh algoritma utama adalah gabungan beberapa algoritma dasar atau algoritma dasar yang sudah dimodifikasi dengan heuristik atau pendeekatan lain.
+
+4. **Game Tambahan - Color Dot Connect: (700 Poin)**
    Membuat game tambahan di mode game awal sebelum memulai permainan. Referensi game tambahan adalah [Color Dot Connect](https://www.cokogames.com/color-dot-connect/play/).
 
    - Membuat game tambahan yaitu Color Dot Connect serta membuat algoritma bot mode untuk game tambahan tersebut. Spesifikasi lain seperti mode dan skema mengikuti game spesifikasi wajib pada poin 0.
@@ -213,33 +230,20 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
    ```
    Note: Penetapan angka untuk warna tertentu tidak harus sama dengan contoh di atas. (angka 1-4 hanya menandakan warna yang berbeda)
 
-2. **Animasi Jalannya Algoritma: (160 Poin)** - Membuat animasi jalannya algoritma dari titik mulai sampai solusi ditemukan.
-<div align=center>
-<img src="./img/dot-connect.gif" width="70%" height="70%">
-</div>
-<br>
-
-3. **Model Algoritma:** (**240 Poin**)
-   - Membuat beberapa model algoritma dasar(minimal 3, misal greedy, brute force, dan UCS). Masing-masing algoritma 80 poin dengan batas maksimum poin adalah 240.
-   - Algoritma dasar ini tidak harus menyelesaikan permainan dalam batasan waktu yang diberikan.
-   - Sehingga total algoritma adalah 4 yaitu 3 model algoritma dasar dan 1 algoritma utama misal gabungan beberapa algoritma dasar atau algoritma dasar yang sudah dimodifikasi dengan heuristik atau pendeekatan lain.
-
-4. **Bonus waktu eksekusi:** (**200 Poin**)
-   - Bonus waktu eksekusi akan diberikan kepada 5 mahasiswa. Poin bonus akan diberikan berdasarkan **5 posisi** waktu eksekusi tercepat dari 10 mahasiswa yang melakukan submisi tercepat. Detail bonus waktu eksekusi dapat dilihat di bagian penilaian.
-
 ## Batasan
 
-- Waktu eksekusi harus di bawah 20 detik.
+- Waktu eksekusi harus di bawah 10 detik untuk game Dot Connect dan Color Dot Connect (jika mengerjakan bonus ini).
+- Game board untuk test case akan **disesuaikan** agar bisa diselesaikan kurang dari batas waktu yang diberikan. (tidak merujuk ke konfigurasi board dari game referensi). Sehingga **jumlah** blocked dot dan free dot **tidak menyesuaikan** game referensi.
 
 ## 📂 Pengerjaan dan Pengumpulan
 
-1. Buatlah repositori **private** pada github masing-masing dan invite `[your github account]` dalam repositori tersebut.
+1. Buatlah repositori **private** pada github masing-masing dan **invite akun github** `NerbFox` dalam repositori tersebut.
 2. Berkas yang dikumpulkan berupa **link rilis tag ke repositori github** yang telah dibuat dengan ketentuan sebagai berikut.
    - Memberikan tag `vn` pada commit terakhir Anda setiap kali ingin melakukan submisi dengan `n` adalah jumlah submisi yang telah dilakukan. (contoh: `v1` untuk submisi pertama).
    - **Tidak menggunakan _url shortener_** (bit.ly, shortlink, atau yang lain) saat melakukan pengumpulan _task_.
    - Anda dapat melakukan rilis dengan panduan [berikut](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).
 3. **Lakukan submisi** pada website seleksi IRK dengan menggunakan akun std.stei.itb.ac.id, **lakukan konfirmasi** ke LINE `@nigelsahl27`, dan **jadwalkan demo** dengan cara yang sama. Lakukan hal yang sama jika membuat rilis yang baru.
-4. Jika terdapat pertanyaan dapat menghubungi LINE `@nigelsahl27` (harap bersabar jika tidak segera dijawab, bisa chat lagi jika dalam waktu 1x12 jam tidak ada balasan karena nigel sedang melaksanakan kerja praktik).
+4. Jika terdapat pertanyaan dapat menghubungi LINE `@nigelsahl27` (harap bersabar jika tidak segera dijawab, bisa chat lagi jika dalam waktu 1x12 jam tidak ada balasan karena asisten sedang melaksanakan kerja praktik).
 
 ## 📌 Penilaian
 
@@ -250,31 +254,31 @@ Penilaian akan berdasarkan implementasi spesifikasi wajib dan bonus yang telah d
 - Kelengkapan fitur yang diimplementasikan
 - Tampilan aplikasi web yang dibuat
 - Kualitas kode yang dibuat
-- Keberhasilan dalam memenuhi spesifikasi wajib dan bonus
-- Ketepatan bonus yang diimplementasikan
 - Kelengkapan readme yang dibuat
+- Ketepatan bonus yang diimplementasikan
+- Keberhasilan dalam memenuhi spesifikasi wajib dan bonus
 
 **Bonus Waktu Eksekusi**: <br>
 Berikut distribusi skor dengan rata-rata waktu eksekusi tercepat berdasarkan test case yang diberikan (**Hanya dilakukan untuk 10 mahasiswa yang melakukan submisi tercepat**)
 
 | Posisi | Poin Bonus Tambahan |
 | ------ | ------------------- |
-| 1      | 200                 |
-| 2      | 150                 |
+| 1      | 150                 |
+| 2      | 125                 |
 | 3      | 100                 |
 | 4      | 50                  |
 | 5      | 25                  |
 | 6 dst  | 0                   |
 
 Detail:
-- Spesifikasi Wajib (1600 Poin)
-- Spesifikasi Bonus (1400 Poin):
-  - Game Tambahan - Color Dot Connect (800 Poin)
+- Spesifikasi Wajib (1500 Poin)
+- Spesifikasi Bonus (1250 Poin):
+  - Bonus waktu eksekusi (150 Poin)
   - Animasi Jalannya Algoritma (160 Poin)
   - Model Algoritma (240 Poin)
-  - Bonus waktu eksekusi (200 Poin)
+  - Game Tambahan - Color Dot Connect (700 Poin)
 
-Total maksimal poin yang bisa didapatkan adalah 3000 Poin.
+Total maksimal poin yang bisa didapatkan adalah **2750 Poin**.
 
 ## 📚 Referensi
 
