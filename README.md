@@ -194,6 +194,7 @@ Aplikasi ini harus memenuhi minimal spesifikasi wajib berikut:
    - Sehingga total algoritma adalah 4 yaitu 3 model algoritma dasar dan 1 algoritma utama. Contoh algoritma utama adalah gabungan beberapa algoritma dasar atau algoritma dasar yang sudah dimodifikasi dengan heuristik atau pendeekatan lain.
 
 4. **Game Tambahan - Color Dot Connect: (700 Poin)**
+
    Membuat game tambahan di mode game awal sebelum memulai permainan. Referensi game tambahan adalah [Color Dot Connect](https://www.cokogames.com/color-dot-connect/play/).
 
    - Membuat game tambahan yaitu Color Dot Connect serta membuat algoritma bot mode untuk game tambahan tersebut. Spesifikasi lain seperti mode dan skema mengikuti game spesifikasi wajib pada poin 0.
